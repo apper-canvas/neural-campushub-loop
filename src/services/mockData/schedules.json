@@ -1,0 +1,106 @@
+[
+  {
+    "Id": 1,
+    "courseId": 1,
+    "dayOfWeek": "Monday",
+    "startTime": "09:00",
+    "endTime": "10:30",
+    "room": "Tech Building 201"
+  },
+  {
+    "Id": 2,
+    "courseId": 1,
+    "dayOfWeek": "Wednesday",
+    "startTime": "09:00",
+    "endTime": "10:30",
+    "room": "Tech Building 201"
+  },
+  {
+    "Id": 3,
+    "courseId": 1,
+    "dayOfWeek": "Friday",
+    "startTime": "09:00",
+    "endTime": "10:30",
+    "room": "Tech Building 201"
+  },
+  {
+    "Id": 4,
+    "courseId": 2,
+    "dayOfWeek": "Tuesday",
+    "startTime": "11:00",
+    "endTime": "12:30",
+    "room": "Math Building 150"
+  },
+  {
+    "Id": 5,
+    "courseId": 2,
+    "dayOfWeek": "Thursday",
+    "startTime": "11:00",
+    "endTime": "12:30",
+    "room": "Math Building 150"
+  },
+  {
+    "Id": 6,
+    "courseId": 3,
+    "dayOfWeek": "Monday",
+    "startTime": "14:00",
+    "endTime": "15:30",
+    "room": "Liberal Arts 305"
+  },
+  {
+    "Id": 7,
+    "courseId": 3,
+    "dayOfWeek": "Wednesday",
+    "startTime": "14:00",
+    "endTime": "15:30",
+    "room": "Liberal Arts 305"
+  },
+  {
+    "Id": 8,
+    "courseId": 4,
+    "dayOfWeek": "Tuesday",
+    "startTime": "13:00",
+    "endTime": "14:30",
+    "room": "Science Building 120"
+  },
+  {
+    "Id": 9,
+    "courseId": 4,
+    "dayOfWeek": "Thursday",
+    "startTime": "13:00",
+    "endTime": "14:30",
+    "room": "Science Building 120"
+  },
+  {
+    "Id": 10,
+    "courseId": 4,
+    "dayOfWeek": "Friday",
+    "startTime": "15:00",
+    "endTime": "17:00",
+    "room": "Science Lab 225"
+  },
+  {
+    "Id": 11,
+    "courseId": 5,
+    "dayOfWeek": "Monday",
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "room": "Humanities 210"
+  },
+  {
+    "Id": 12,
+    "courseId": 5,
+    "dayOfWeek": "Wednesday",
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "room": "Humanities 210"
+  },
+  {
+    "Id": 13,
+    "courseId": 5,
+    "dayOfWeek": "Friday",
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "room": "Humanities 210"
+  }
+]

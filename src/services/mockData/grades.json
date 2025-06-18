@@ -1,0 +1,164 @@
+[
+  {
+    "Id": 1,
+    "courseId": 1,
+    "assignmentType": "Homework",
+    "weight": 30,
+    "score": 285,
+    "total": 300,
+    "percentage": 95.0
+  },
+  {
+    "Id": 2,
+    "courseId": 1,
+    "assignmentType": "Quizzes",
+    "weight": 20,
+    "score": 170,
+    "total": 200,
+    "percentage": 85.0
+  },
+  {
+    "Id": 3,
+    "courseId": 1,
+    "assignmentType": "Projects",
+    "weight": 35,
+    "score": 0,
+    "total": 100,
+    "percentage": 0
+  },
+  {
+    "Id": 4,
+    "courseId": 1,
+    "assignmentType": "Participation",
+    "weight": 15,
+    "score": 90,
+    "total": 100,
+    "percentage": 90.0
+  },
+  {
+    "Id": 5,
+    "courseId": 2,
+    "assignmentType": "Homework",
+    "weight": 25,
+    "score": 235,
+    "total": 250,
+    "percentage": 94.0
+  },
+  {
+    "Id": 6,
+    "courseId": 2,
+    "assignmentType": "Exams",
+    "weight": 50,
+    "score": 180,
+    "total": 200,
+    "percentage": 90.0
+  },
+  {
+    "Id": 7,
+    "courseId": 2,
+    "assignmentType": "Quizzes",
+    "weight": 25,
+    "score": 235,
+    "total": 250,
+    "percentage": 94.0
+  },
+  {
+    "Id": 8,
+    "courseId": 3,
+    "assignmentType": "Essays",
+    "weight": 40,
+    "score": 0,
+    "total": 100,
+    "percentage": 0
+  },
+  {
+    "Id": 9,
+    "courseId": 3,
+    "assignmentType": "Participation",
+    "weight": 20,
+    "score": 95,
+    "total": 100,
+    "percentage": 95.0
+  },
+  {
+    "Id": 10,
+    "courseId": 3,
+    "assignmentType": "Peer Reviews",
+    "weight": 15,
+    "score": 95,
+    "total": 100,
+    "percentage": 95.0
+  },
+  {
+    "Id": 11,
+    "courseId": 3,
+    "assignmentType": "Final Paper",
+    "weight": 25,
+    "score": 0,
+    "total": 100,
+    "percentage": 0
+  },
+  {
+    "Id": 12,
+    "courseId": 4,
+    "assignmentType": "Homework",
+    "weight": 25,
+    "score": 220,
+    "total": 250,
+    "percentage": 88.0
+  },
+  {
+    "Id": 13,
+    "courseId": 4,
+    "assignmentType": "Lab Reports",
+    "weight": 30,
+    "score": 0,
+    "total": 100,
+    "percentage": 0
+  },
+  {
+    "Id": 14,
+    "courseId": 4,
+    "assignmentType": "Exams",
+    "weight": 45,
+    "score": 165,
+    "total": 200,
+    "percentage": 82.5
+  },
+  {
+    "Id": 15,
+    "courseId": 5,
+    "assignmentType": "Essays",
+    "weight": 35,
+    "score": 0,
+    "total": 100,
+    "percentage": 0
+  },
+  {
+    "Id": 16,
+    "courseId": 5,
+    "assignmentType": "Quizzes",
+    "weight": 25,
+    "score": 92,
+    "total": 100,
+    "percentage": 92.0
+  },
+  {
+    "Id": 17,
+    "courseId": 5,
+    "assignmentType": "Participation",
+    "weight": 20,
+    "score": 95,
+    "total": 100,
+    "percentage": 95.0
+  },
+  {
+    "Id": 18,
+    "courseId": 5,
+    "assignmentType": "Final Exam",
+    "weight": 20,
+    "score": 0,
+    "total": 100,
+    "percentage": 0
+  }
+]

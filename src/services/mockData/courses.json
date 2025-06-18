@@ -1,0 +1,67 @@
+[
+  {
+    "Id": 1,
+    "code": "CS101",
+    "name": "Introduction to Computer Science",
+    "credits": 3,
+    "professor": "Dr. Sarah Johnson",
+    "room": "Tech Building 201",
+    "currentGrade": 87.5,
+    "color": "#3B82F6",
+    "enrolled": true,
+    "semester": "Fall 2024",
+    "description": "Fundamental concepts of computer science including programming basics, algorithms, and data structures."
+  },
+  {
+    "Id": 2,
+    "code": "MATH201",
+    "name": "Calculus II",
+    "credits": 4,
+    "professor": "Prof. Michael Chen",
+    "room": "Math Building 150",
+    "currentGrade": 92.3,
+    "color": "#10B981",
+    "enrolled": true,
+    "semester": "Fall 2024",
+    "description": "Advanced calculus topics including integration techniques, series, and differential equations."
+  },
+  {
+    "Id": 3,
+    "code": "ENG102",
+    "name": "English Composition",
+    "credits": 3,
+    "professor": "Dr. Emily Davis",
+    "room": "Liberal Arts 305",
+    "currentGrade": 89.1,
+    "color": "#F59E0B",
+    "enrolled": true,
+    "semester": "Fall 2024",
+    "description": "Advanced writing skills focusing on argumentation, research, and critical analysis."
+  },
+  {
+    "Id": 4,
+    "code": "PHYS151",
+    "name": "Physics I",
+    "credits": 4,
+    "professor": "Dr. Robert Wilson",
+    "room": "Science Building 120",
+    "currentGrade": 84.7,
+    "color": "#8B5CF6",
+    "enrolled": true,
+    "semester": "Fall 2024",
+    "description": "Classical mechanics, thermodynamics, and wave motion with laboratory component."
+  },
+  {
+    "Id": 5,
+    "code": "HIST105",
+    "name": "World History",
+    "credits": 3,
+    "professor": "Prof. Lisa Anderson",
+    "room": "Humanities 210",
+    "currentGrade": 91.8,
+    "color": "#EF4444",
+    "enrolled": true,
+    "semester": "Fall 2024",
+    "description": "Survey of world civilizations from ancient times to the present era."
+  }
+]

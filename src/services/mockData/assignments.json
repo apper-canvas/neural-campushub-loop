@@ -1,0 +1,122 @@
+[
+  {
+    "Id": 1,
+    "courseId": 1,
+    "title": "Programming Project: Calculator App",
+    "dueDate": "2024-12-15T23:59:00",
+    "priority": "high",
+    "completed": false,
+    "grade": null,
+    "notes": "Build a functional calculator using Python with GUI",
+    "type": "project",
+    "weight": 20
+  },
+  {
+    "Id": 2,
+    "courseId": 1,
+    "title": "Algorithm Analysis Quiz",
+    "dueDate": "2024-12-10T14:30:00",
+    "priority": "medium",
+    "completed": true,
+    "grade": 85,
+    "notes": "Big O notation and complexity analysis",
+    "type": "quiz",
+    "weight": 10
+  },
+  {
+    "Id": 3,
+    "courseId": 2,
+    "title": "Integration Techniques Homework",
+    "dueDate": "2024-12-12T10:00:00",
+    "priority": "medium",
+    "completed": false,
+    "grade": null,
+    "notes": "Chapter 7 problems 1-25",
+    "type": "homework",
+    "weight": 15
+  },
+  {
+    "Id": 4,
+    "courseId": 2,
+    "title": "Midterm Exam",
+    "dueDate": "2024-12-18T09:00:00",
+    "priority": "high",
+    "completed": false,
+    "grade": null,
+    "notes": "Covers chapters 5-8, bring calculator",
+    "type": "exam",
+    "weight": 25
+  },
+  {
+    "Id": 5,
+    "courseId": 3,
+    "title": "Research Paper: Climate Change",
+    "dueDate": "2024-12-20T23:59:00",
+    "priority": "high",
+    "completed": false,
+    "grade": null,
+    "notes": "5-7 pages, MLA format, minimum 8 sources",
+    "type": "paper",
+    "weight": 30
+  },
+  {
+    "Id": 6,
+    "courseId": 3,
+    "title": "Peer Review Workshop",
+    "dueDate": "2024-12-11T15:30:00",
+    "priority": "low",
+    "completed": true,
+    "grade": 95,
+    "notes": "Review two classmates' drafts",
+    "type": "participation",
+    "weight": 5
+  },
+  {
+    "Id": 7,
+    "courseId": 4,
+    "title": "Lab Report: Pendulum Motion",
+    "dueDate": "2024-12-14T17:00:00",
+    "priority": "medium",
+    "completed": false,
+    "grade": null,
+    "notes": "Analysis of experimental data from lab session",
+    "type": "lab",
+    "weight": 15
+  },
+  {
+    "Id": 8,
+    "courseId": 4,
+    "title": "Problem Set 8",
+    "dueDate": "2024-12-13T11:59:00",
+    "priority": "low",
+    "completed": true,
+    "grade": 88,
+    "notes": "Thermodynamics problems",
+    "type": "homework",
+    "weight": 10
+  },
+  {
+    "Id": 9,
+    "courseId": 5,
+    "title": "Essay: Industrial Revolution Impact",
+    "dueDate": "2024-12-16T23:59:00",
+    "priority": "medium",
+    "completed": false,
+    "grade": null,
+    "notes": "3-4 pages analyzing social and economic changes",
+    "type": "essay",
+    "weight": 20
+  },
+  {
+    "Id": 10,
+    "courseId": 5,
+    "title": "Chapter 12 Reading Quiz",
+    "dueDate": "2024-12-09T09:00:00",
+    "priority": "low",
+    "completed": true,
+    "grade": 92,
+    "notes": "Multiple choice quiz on assigned reading",
+    "type": "quiz",
+    "weight": 5
+  }
+]
