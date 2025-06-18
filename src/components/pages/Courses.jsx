@@ -47,7 +47,7 @@ const Courses = () => {
   }, []);
 
   const handleDropCourse = async (course) => {
-    if (!window.confirm(`Are you sure you want to drop ${course.name}?`)) {
+if (!window.confirm(`Are you sure you want to drop ${course.Name || course.name}?`)) {
       return;
     }
 
@@ -57,7 +57,7 @@ const Courses = () => {
         c.Id === course.Id ? { ...c, enrolled: false } : c
       );
       setCourses(updatedCourses);
-      toast.success(`Dropped ${course.name}`);
+toast.success(`Dropped ${course.Name || course.name}`);
     } catch (error) {
       toast.error('Failed to drop course');
     }
@@ -70,7 +70,7 @@ const Courses = () => {
         c.Id === course.Id ? { ...c, enrolled: true } : c
       );
       setCourses(updatedCourses);
-      toast.success(`Enrolled in ${course.name}`);
+toast.success(`Enrolled in ${course.Name || course.name}`);
     } catch (error) {
       toast.error('Failed to enroll in course');
     }
@@ -78,9 +78,9 @@ const Courses = () => {
 
   const filteredCourses = courses.filter(course => {
     // Search filter
-    const matchesSearch = course.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         course.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         course.professor.toLowerCase().includes(searchTerm.toLowerCase());
+const matchesSearch = (course.Name || course.name)?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         course.code?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         course.professor?.toLowerCase().includes(searchTerm.toLowerCase());
 
     // Active filters
     const matchesFilters = activeFilters.length === 0 || activeFilters.every(filter => {
@@ -93,8 +93,8 @@ const Courses = () => {
           return course.credits === 3;
         case '4-credits':
           return course.credits === 4;
-        case 'high-gpa':
-          return course.currentGrade >= 90;
+case 'high-gpa':
+          return (course.current_grade || course.currentGrade) >= 90;
         default:
           return true;
       }

@@ -52,17 +52,18 @@ const Grades = () => {
     const courseGradeMap = {};
     
     // Group grades by course
-    gradesData.forEach(grade => {
-      if (!courseGradeMap[grade.courseId]) {
-        courseGradeMap[grade.courseId] = {
+gradesData.forEach(grade => {
+      const courseId = grade.course_id || grade.courseId;
+      if (!courseGradeMap[courseId]) {
+courseGradeMap[courseId] = {
           totalWeightedScore: 0,
           totalWeight: 0
         };
       }
       
-      const weightedScore = (grade.percentage / 100) * grade.weight;
-      courseGradeMap[grade.courseId].totalWeightedScore += weightedScore;
-      courseGradeMap[grade.courseId].totalWeight += grade.weight;
+const weightedScore = (grade.percentage / 100) * grade.weight;
+      courseGradeMap[courseId].totalWeightedScore += weightedScore;
+      courseGradeMap[courseId].totalWeight += grade.weight;
     });
 
     // Calculate final grades for each course
@@ -89,8 +90,8 @@ const Grades = () => {
       else if (finalGrade >= 65) gradePoints = 0.7;
 
       return {
-        courseId: course.Id,
-        courseName: course.name,
+courseId: course.Id,
+        courseName: course.Name || course.name,
         courseCode: course.code,
         credits: course.credits,
         grade: finalGrade,
@@ -127,8 +128,7 @@ const Grades = () => {
 
   const filteredGrades = selectedCourse === 'all' 
     ? grades 
-    : grades.filter(g => g.courseId === parseInt(selectedCourse, 10));
-
+: grades.filter(g => (g.course_id || g.courseId) === parseInt(selectedCourse, 10));
   const courseGrades = calculateCourseGrades(grades, courses);
 
   const containerVariants = {
@@ -210,7 +210,7 @@ const Grades = () => {
             <option value="all">All Courses</option>
             {courses.map(course => (
               <option key={course.Id} value={course.Id}>
-                {course.code} - {course.name}
+{course.code} - {course.Name || course.name}
               </option>
             ))}
           </select>

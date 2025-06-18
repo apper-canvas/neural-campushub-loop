@@ -32,8 +32,8 @@ const Dashboard = () => {
 
         const enrolledCourses = coursesData.filter(c => c.enrolled);
         const completedAssignments = assignmentsData.filter(a => a.completed);
-        const upcomingDeadlines = assignmentsData.filter(a => {
-          const dueDate = new Date(a.dueDate);
+const upcomingDeadlines = assignmentsData.filter(a => {
+          const dueDate = new Date(a.due_date || a.dueDate);
           const weekFromNow = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
           return !a.completed && dueDate <= weekFromNow;
         });

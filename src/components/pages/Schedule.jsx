@@ -246,9 +246,9 @@ const Schedule = () => {
                 <div>
                   <h3 className="font-medium text-surface-900">This Week</h3>
                   <p className="text-2xl font-bold text-success-600">
-                    {schedules.filter(s => {
+{schedules.filter(s => {
                       const today = format(new Date(), 'EEEE');
-                      return s.dayOfWeek === today;
+                      return (s.day_of_week || s.dayOfWeek) === today;
                     }).length}
                   </p>
                 </div>
