@@ -1,50 +1,52 @@
-import { useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { useContext } from 'react';
-import { AuthContext } from '../App';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/layouts/Root';
+import { useSelector } from 'react-redux';
 
-function Signup() {
+const Signup = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const { isInitialized } = useContext(AuthContext);
-  
+  const { isInitialized } = useAuth();
+  const { user } = useSelector((state) => state.user);
+
   useEffect(() => {
     if (isInitialized) {
-      // Show signup UI in this component
+      if (user) {
+        navigate('/');
+        return;
+      }
+      
       const { ApperUI } = window.ApperSDK;
       ApperUI.showSignup("#authentication");
     }
-  }, [isInitialized]);
-  
+  }, [isInitialized, user, navigate]);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-surface-50 dark:bg-surface-900">
-      <div className="w-full max-w-md space-y-8 p-8 bg-white dark:bg-surface-800 rounded-lg shadow-md">
-        <div className="flex flex-col gap-6 items-center justify-center">
-          <div className="w-14 h-14 shrink-0 rounded-xl flex items-center justify-center bg-gradient-to-r from-primary-500 to-primary-600 text-white text-2xl 2xl:text-3xl font-bold">
-            C
+    <div className="min-h-screen flex items-center justify-center bg-surface-50">
+      <div className="w-full max-w-md p-8">
+        <div className="text-center mb-8">
+          <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-800 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span className="text-2xl font-bold text-white">C</span>
           </div>
-          <div className="flex flex-col gap-1 items-center justify-center">
-            <div className="text-center text-lg xl:text-xl font-bold">
-              Create Account
-            </div>
-            <div className="text-center text-sm text-gray-500">
-              Please create an account to continue
-            </div>
-          </div>
+          <h1 className="text-2xl font-display font-bold text-surface-900">Join CampusHub</h1>
+          <p className="text-surface-600 mt-2">Create your account to get started</p>
         </div>
-        <div id="authentication" />
-        <div className="text-center mt-4">
-          <p className="text-sm text-surface-600 dark:text-surface-400">
+        
+        <div id="authentication"></div>
+        
+        <div className="text-center mt-6">
+          <p className="text-sm text-surface-600">
             Already have an account?{' '}
-            <Link to="/login" className="font-medium text-primary hover:text-primary-dark">
+            <button
+              onClick={() => navigate('/login')}
+              className="text-primary-600 hover:text-primary-700 font-medium"
+            >
               Sign in
-            </Link>
+            </button>
           </p>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Signup;

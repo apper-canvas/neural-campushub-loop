@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 
 const Callback = () => {
   useEffect(() => {
@@ -7,8 +7,10 @@ const Callback = () => {
   }, []);
   
   return (
-    <div id="authentication-callback"></div>
-  )
-}
+    <div className="min-h-screen flex items-center justify-center bg-surface-50">
+      <div id="authentication-callback"></div>
+    </div>
+  );
+};
 
-export default Callback
+export default Callback;

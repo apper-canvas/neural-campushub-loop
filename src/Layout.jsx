@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import ApperIcon from '@/components/ApperIcon';
-import { routeArray } from '@/config/routes';
+import React, { useState } from "react";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import { useSelector } from "react-redux";
+import { useAuth } from "@/layouts/Root";
+import ApperIcon from "@/components/ApperIcon";
+import { routeArray } from "@/config/routes";
 
 const Layout = () => {
+  const { user } = useSelector((state) => state.user);
+  const { logout } = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -79,15 +83,27 @@ const Layout = () => {
           </nav>
 
           {/* User Info */}
+{/* User Info */}
           <div className="p-4 border-t border-surface-200">
             <div className="flex items-center gap-3 p-3 rounded-lg bg-surface-50">
               <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center">
-                <span className="text-sm font-semibold text-white">JS</span>
+                <span className="text-sm font-semibold text-white">
+                  {user?.firstName?.charAt(0) || 'U'}{user?.lastName?.charAt(0) || 'S'}
+                </span>
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-surface-900 truncate">John Smith</p>
-                <p className="text-xs text-surface-500">Computer Science</p>
+                <p className="text-sm font-medium text-surface-900 truncate">
+                  {user?.firstName} {user?.lastName}
+                </p>
+                <p className="text-xs text-surface-500">Student</p>
               </div>
+              <button
+                onClick={logout}
+                className="p-1 text-surface-400 hover:text-error-600 transition-colors"
+                title="Logout"
+              >
+<ApperIcon name="LogOut" className="w-4 h-4" />
+              </button>
             </div>
           </div>
         </aside>
@@ -156,17 +172,28 @@ const Layout = () => {
                 </nav>
 
                 {/* Mobile User Info */}
+{/* Mobile User Info */}
                 <div className="p-4 border-t border-surface-200">
                   <div className="flex items-center gap-3 p-3 rounded-lg bg-surface-50">
                     <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center">
-                      <span className="text-sm font-semibold text-white">JS</span>
+                      <span className="text-sm font-semibold text-white">
+                        {user?.firstName?.charAt(0) || 'U'}{user?.lastName?.charAt(0) || 'S'}
+                      </span>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-surface-900 truncate">John Smith</p>
-                      <p className="text-xs text-surface-500">Computer Science</p>
+                      <p className="text-sm font-medium text-surface-900 truncate">
+                        {user?.firstName} {user?.lastName}
+                      </p>
+                      <p className="text-xs text-surface-500">Student</p>
                     </div>
+                    <button
+                      onClick={logout}
+                      className="p-1 text-surface-400 hover:text-error-600 transition-colors"
+                      title="Logout"
+                    >
+                      <ApperIcon name="LogOut" className="w-4 h-4" />
+                    </button>
                   </div>
-                </div>
               </motion.div>
             </>
           )}
@@ -181,8 +208,8 @@ const Layout = () => {
             exit={pageTransitionExit}
             transition={pageTransitionConfig}
             className="h-full"
-          >
-            <Outlet />
+>
+            <Outlet context={{ user, logout }} />
           </motion.div>
         </main>
       </div>
