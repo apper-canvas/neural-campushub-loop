@@ -1,8 +1,8 @@
 const customFunctions = {};
+import routesData from '@/router/routes.json' with { type: 'json' };
 
 export const getRouteConfig = (path) => {
   try {
-    import routesData from '@/router/routes.json' with { type: 'json' };
     const routes = routesData;
     
     // Find exact match first
